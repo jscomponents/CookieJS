@@ -21,18 +21,18 @@
 
 <form id="frm-cookie" action="" method="post">
 	<fieldset>
-		<legend>Informações:</legend>
+		<legend>Informações</legend>
 		
 		<label for="nome">
 			Nome:<br />
-			<input type="text" id="nome" tabindex="1" name="nome" />
+			<input type="text" id="nome" tabindex="1" name="nome" autofocus="autofocus" required="required" />
 		</label>
 		
 		<br />
 		
 		<label for="email">
 			Email:<br />
-			<input type="text" id="email" tabindex="2" name="email" />
+			<input type="email" id="email" tabindex="2" name="email" required="required" />
 		</label>
 		
 		<br />
@@ -45,8 +45,8 @@
 		<br />
 		<br />
 		
-		<input type="submit" class="button" value="Gravar Cookie" />
-		<input type="reset" class="button" value="Apagar Cookie" />
+		<input type="submit" class="button" value="Save Cookie" />
+		<input type="reset" class="button" value="Delete Cookie" />
 	</fieldset>
 </form>
 
