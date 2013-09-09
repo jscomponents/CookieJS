@@ -1,0 +1,47 @@
+/**
+ *
+ * Documento CSS
+ * @author Edy Segura, edy@segura.pro.br
+ *
+ */
+
+input[type='text'] {
+	border: 1px solid #6E93B0;
+	background: #EAF2F7;
+	padding: 2px;
+	-moz-border-radius: 8px;
+}
+
+input[type='text']:hover {
+	border: 1px solid #000;
+	background: #fff;
+}
+
+input[type='text']:focus {
+	border: 1px solid #F00;
+	background: #FFF;
+	color: #000;
+}
+
+input.button {
+	padding: 4px 4px 4px 22px;
+	border: 2px outset #ccc;
+	-moz-border-radius: 8px;
+}
+
+input.button:hover {
+	border-style: inset;
+}
+
+input[type='submit'] {
+	background: url(images/save.png) no-repeat 5px;
+}
+
+input[type='reset'] {
+	background: url(images/deletar.png) no-repeat 5px;
+}
+
+
+img {
+	cursor: pointer;
+}
