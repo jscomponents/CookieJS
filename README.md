@@ -1,4 +1,5 @@
 CookieJS
 ========
 
-A lightweight library to handle cookies with pure JavaScript
+A lightweight library to handle cookie in the browser with pure JavaScript.
+Feel free to fork!
