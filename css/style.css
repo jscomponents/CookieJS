@@ -1,11 +1,17 @@
 /**
  *
  * Documento CSS
- * @author Edy Segura, edy@segura.pro.br
+ * @author Edy Segura, edysegura@gmail.com
  *
  */
 
-input[type='text'] {
+label {
+	display: block;
+	margin-bottom: 10px;
+}
+
+input[type='text'],
+input[type='email'] {
 	border: 1px solid #6E93B0;
 	background: #EAF2F7;
 	padding: 2px;

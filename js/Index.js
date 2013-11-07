@@ -1,7 +1,7 @@
 ﻿/**
  * 
- * Objeto Literal para teste do componente Cookie.js
- * @author Edy Segura, edy@segura.pro.br
+ * Object Literal
+ * @author Edy Segura, edysegura@gmail.com
  *
  */
 var Index = {
@@ -19,44 +19,45 @@ var Index = {
 			form.onsubmit = Index.formSubmit;
 			form.onreset = Index.formReset;
 		}
-		else {
-			alert('Error: form#' + formId + ' não encontrado!');
-		}
 	},
 	
 	formSubmit: function() {
-		var form = this, jsonString = '';
+		var 
+			form = this, 
+			formData = {};
+				
+		formData.name  = form.name.value;
+		formData.email = form.email.value;
+		formData.site  = form.site.value;
 		
-		jsonString += '{'
-			+ 'nome:"'    + form.nome.value    + '",'
-			+ 'email:"'	  + form.email.value   + '",'
-			+ 'website:"' + form.website.value + '"'
-		+ '}';
+		Cookie.set('formData', JSON.stringify(formData), 365);
+		alert('Cookie created!');
 		
-		Cookie.set('formData', jsonString, 365);
-		alert('Cookie criado com sucesso!');
 		return false;
 	},
 	
 	formReset: function() {
-		var form = this, element;
+		var 
+			form = this, 
+			element;
 		
 		for(var i = 0; i < form.elements.length; i++) {
 			element = form.elements[i];
-			if(element.type == 'text') {
+			if(/text|email/.test(element.type)) {
 				element.value = element.defaultValue = "";
 			}
 		}
 		
 		Cookie.unset('formData');
-		alert('Cookie removido com sucesso!');
+		alert('Cookie deleted!');
+
 		return false;
 	},
 	
 	getCookie: function() {
 		var jsonString = Cookie.get('formData');
 		if(jsonString) {
-			Index.populateForm(eval('(' + jsonString + ')'));
+			Index.populateForm(JSON.parse(jsonString));
 		}
 	},
 	
@@ -72,5 +73,5 @@ var Index = {
 	
 }
 
-//inicializacao
-window.onload = Index.init;
+//initialization
+Index.init();

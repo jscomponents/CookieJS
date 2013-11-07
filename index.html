@@ -11,39 +11,30 @@
 </head>
 <body>
 
-<h1>Componente CookieJS</h1>
+<h1>CookieJS</h1>
 <p>
-	Componente para manipulção de cookies através do javascript.<br />
-	Para mais detalhes veja o código fonte. 
-	Ou se preferir faça o download deste 
-	<a href="http://files.edysegura.com/labs/Cookie.js.zip">exemplo</a>.
+	A lightweight library to handle cookies with pure JavaScript.<br />
+	To the lastest version go to <a href="https://github.com/edysegura/CookieJS">project page</a>.
 </p>
 
 <form id="frm-cookie" action="" method="post">
 	<fieldset>
-		<legend>Informações</legend>
+		<legend>Personal Information</legend>
 		
-		<label for="nome">
-			Nome:<br />
-			<input type="text" id="nome" tabindex="1" name="nome" autofocus="autofocus" required="required" />
+		<label for="name">
+			Name:<br />
+			<input type="text" id="name" tabindex="1" name="name" autofocus="autofocus" required="required" />
 		</label>
-		
-		<br />
 		
 		<label for="email">
 			Email:<br />
 			<input type="email" id="email" tabindex="2" name="email" required="required" />
 		</label>
 		
-		<br />
-		
-		<label for="website">
-			Website:<br />
-			<input type="text" id="website" tabindex="3" name="website" />
+		<label for="site">
+			Site:<br />
+			<input type="text" id="site" tabindex="3" name="site" />
 		</label>
-		
-		<br />
-		<br />
 		
 		<input type="submit" class="button" value="Save Cookie" />
 		<input type="reset" class="button" value="Delete Cookie" />
@@ -51,8 +42,8 @@
 </form>
 
 <!-- scripts -->
-<script type="text/javascript" src="js/Cookie/Cookie.js"></script>
-<script type="text/javascript" src="js/Index.js"></script>
+<script src="js/Cookie/Cookie.js"></script>
+<script src="js/Index.js"></script>
 
 </body>
 </html>
