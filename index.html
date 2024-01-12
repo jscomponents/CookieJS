@@ -1,49 +1,60 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
 
-<title>CookieJS</title>
+    <title>CookieJS</title>
 
-<!-- externals -->
-<link rel="stylesheet" href="css/style.css" type="text/css" />
+    <!-- externals -->
+    <link rel="stylesheet" href="css/style.css" type="text/css" />
+  </head>
+  <body>
+    <h1>CookieJS</h1>
+    <p>
+      A lightweight library to handle cookies with pure JavaScript.<br />
+      To the lastest version go to
+      <a href="https://github.com/edysegura/CookieJS">project page</a>.
+    </p>
 
-</head>
-<body>
+    <form id="frm-cookie" action="" method="post">
+      <fieldset>
+        <legend>Personal Information</legend>
 
-<h1>CookieJS</h1>
-<p>
-	A lightweight library to handle cookies with pure JavaScript.<br />
-	To the lastest version go to <a href="https://github.com/edysegura/CookieJS">project page</a>.
-</p>
+        <label for="name">
+          Name:<br />
+          <input
+            type="text"
+            id="name"
+            tabindex="1"
+            name="name"
+            autofocus="autofocus"
+            required="required"
+          />
+        </label>
 
-<form id="frm-cookie" action="" method="post">
-	<fieldset>
-		<legend>Personal Information</legend>
-		
-		<label for="name">
-			Name:<br />
-			<input type="text" id="name" tabindex="1" name="name" autofocus="autofocus" required="required" />
-		</label>
-		
-		<label for="email">
-			Email:<br />
-			<input type="email" id="email" tabindex="2" name="email" required="required" />
-		</label>
-		
-		<label for="site">
-			Site:<br />
-			<input type="text" id="site" tabindex="3" name="site" />
-		</label>
-		
-		<input type="submit" class="button" value="Save Cookie" />
-		<input type="reset" class="button" value="Delete Cookie" />
-	</fieldset>
-</form>
+        <label for="email">
+          Email:<br />
+          <input
+            type="email"
+            id="email"
+            tabindex="2"
+            name="email"
+            required="required"
+          />
+        </label>
 
-<!-- scripts -->
-<script src="js/Cookie/Cookie.js"></script>
-<script src="js/Index.js"></script>
+        <label for="site">
+          Site:<br />
+          <input type="text" id="site" tabindex="3" name="site" />
+        </label>
 
-</body>
+        <input type="submit" class="button" value="Save Cookie" />
+        <input type="reset" class="button" value="Delete Cookie" />
+      </fieldset>
+    </form>
+
+    <!-- scripts -->
+    <script src="js/Cookie/Cookie.js"></script>
+    <script src="js/Index.js"></script>
+  </body>
 </html>
